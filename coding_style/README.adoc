@@ -85,6 +85,7 @@ Examples:: there are multiple ways to avoid long lines but the most generic one 
 ----
 +
 TIP: Always use the sign `>-` instead of `>` unless you are absolutely sure the trailing newline is not significant.
+The sign `>` adds a newline character to the last line, effectively turning `non nunc.` at the end of the example string above into  `"non nunc.\n"`, and `>-` doesn't add the newline character.
 It is really easy to introduce an error by using `>` and silently add a newline to a variable, like a filename, which leads to strange, hard to decipher errors.
 See below for "How To Wrap Lines"
 ====
@@ -365,7 +366,7 @@ Here are some examples of how to deal with line wrapping in common scenarios:
 
 * Jinja expressions can be wrapped
 
-Within the Jinja expression, whitespace isn't significant, so take advantage of this to wrap lines as readable as possible:
+Within the Jinja expression, whitespace and newline characters aren't significant, so take advantage of this to wrap lines into as readable a form as possible:
 
 .Do this:
 [source,yaml]
